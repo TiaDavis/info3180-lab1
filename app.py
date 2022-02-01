@@ -15,7 +15,7 @@ app = Flask(__name__)
 '''
 @app.route('/')
 def home():
- return 'My home page'
+    return 'My home page'
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -24,7 +24,7 @@ def page_not_found(error):
     
 @app.route('/about')
 def about():
- return render_template('about.html')
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8080)
